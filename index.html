@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D'Fitas e Aviamentos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <canvas id="bgCanvas"></canvas>
+
+    <header style="background-color: #ff69b4; padding: 10px 0;">
+        <div class="container header-content" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+            
+            <div style="background: white; border-radius: 50%; padding: 6px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+                <img src="image/ChatGPT Image 17 de jun. de 2025, 19_37_06.png" alt="Logo Dfitas" style="height: 50px;">
+            </div>
+
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav>
+                <ul class="nav-links" id="nav-links" style="display: flex; gap: 20px; list-style: none; padding: 0; margin: 0;">
+                    <li><a href="#home" style="color: white; font-weight: bold;">Início</a></li>
+                    <li><a href="#about" style="color: white; font-weight: bold;">Sobre</a></li>
+                    <li><a href="#products" style="color: white; font-weight: bold;">Produtos</a></li>
+                    <li><a href="#catalog" style="color: white; font-weight: bold;">Catálogo</a></li>
+                    <li><a href="#contact" style="color: white; font-weight: bold;">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+     <section id="home" class="fade-in">
+    <div class="container">
+        <h2>Bem-vindo ao nosso cantinho!</h2>
+        <p>O lugar perfeito para suas criações.</p>
+        <a href="#" class="btn" id="openCatalogMenuBtn">Ver Produtos</a>
+        <div id="catalogListMiniMenu" class="catalog-list-mini-menu">
+            <h4>Nossos Catálogos:</h4>
+            <div class="catalogs-grid">
+                <div class="catalog-item-detail">
+                    <p>Fitas de Gorgurão</p>
+                    <a href="https://www.canva.com/design/DAFF1N2_Jhk/BMf3Hd_tQtxtG3Wq6Yfo0Q/view?utm_content=DAFF1N2_Jhk&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Fitas de Cetim</p>
+                    <a href="https://www.canva.com/design/DAFFjHwrmWI/D9UesIkZBAEc6My9-wKXcA/view?utm_content=DAFFjHwrmWI&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Apliques e Aviamentos</p>
+                    <a href="https://www.canva.com/design/DAFFeuojG8E/3qFcid-tHEUr9RUjse35dQ/view?utm_content=DAFFeuojG8E&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Entremeios e Passantes</p>
+                    <a href="https://www.canva.com/design/DAFFwpAkrHg/1EXsGUFc8G706lhzylBBbw/view?utm_content=DAFFwpAkrHg&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Fitas Estampadas</p>
+                    <a href="https://www.canva.com/design/DAFFrFSD-jY/Qboa_TAe32iCAYpXY5BBmg/view?utm_content=DAFFrFSD-jY&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Páscoa</p>
+                    <a href="https://www.canva.com/design/DAFb5D6_AG8/9VK3uXddrShZ0IR-Dl6feg/view?utm_content=DAFb5D6_AG8&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Pedrarias</p>
+                    <a href="https://www.canva.com/design/DAFFrDYdyek/PSO3eqrX9ouJAV7tTeUJrw/view?utm_content=DAFFrDYdyek&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Lonitas</p>
+                    <a href="https://www.canva.com/design/DAFFrJQqtaU/23kVcgmwmUhMIcbfouQrBA/view?utm_content=DAFFrJQqtaU&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Pompons e Meias</p>
+                    <a href="https://www.canva.com/design/DAFFxGQXIhQ/4tIOW_Bo7LZFHXxgPV9rWA/view?utm_content=DAFFxGQXIhQ&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Tiaras</p>
+                    <a href="https://www.canva.com/design/DAFFqe5YvkI/PY0__H0OUrxxNibdbWJb-w/view?utm_content=DAFFqe5YvkI&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Contas de Pérola</p>
+                    <a href="https://www.canva.com/design/DAFFv_31Xsw/G4725FPdbOcLW_h5EyK4Zg/view?utm_content=DAFFv_31Xsw&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Granulados</p>
+                    <a href="https://www.canva.com/design/DAFIdKeKi9s/SHvE2IAMmL-l1xMraxC0iQ/view?utm_content=DAFIdKeKi9s&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Flores de Organza</p>
+                    <a href="https://www.canva.com/design/DAFKU9VciIc/xKLqv9doDNKZFBWd-FmJVg/view?utm_content=DAFKU9VciIc&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>São João</p>
+                    <a href="https://www.canva.com/design/DAFfMRFf8EI/kI23b37o3D1yCt7eyZaOEw/view?utm_content=DAFfMRFf8EI&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+                <div class="catalog-item-detail">
+                    <p>Volta às Aulas</p>
+                    <a href="https://www.canva.com/design/DAF4wxxwlC4/T26an-2Q5ZsQgD75Bb0nbQ/edit?utm_content=DAF4wxxwlC4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn btn-small" target="_blank" rel="noopener noreferrer">Ver Catálogo</a>
+                </div>
+            </div>
+            <button id="closeCatalogMenuBtn" class="close-menu-btn">Fechar</button>
+        </div>
+    </div>
+</section>
+
+        <section id="about" class="fade-in">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <p>A Dfitas&Aviamentos nasceu para ser o lugar onde a criatividade encontra tudo o que precisa para ganhar vida. Somos apaixonados por artesanato e queremos inspirar você a criar peças únicas e especiais. Oferecemos uma vasta gama de fitas de diferentes materiais, larguras e cores, além de aviamentos essenciais como botões, rendas, apliques e muito mais. Nosso compromisso é com a qualidade dos produtos e com o suporte ao cliente, garantindo que suas ideias se tornem realidade com os melhores materiais. Explore nosso catálogo e descubra um mundo de possibilidades para seus projetos!</p>
+            </div>
+        </section>
+
+        <section id="catalog" class="fade-in">
+                <div class="catalog-card">
+                        <h3>Atendimento Personalizado</h3>
+                        <p>Clique abaixo para falar com uma de nossas vendedoras.</p>
+                        <button id="openContactMenuBtn" class="btn">Falar com Vendedora</button>
+                    </div>
+                </div>
+
+                <div id="contactMiniMenu" class="contact-mini-menu">
+                    <h4>Escolha a vendedora:</h4>
+                    <div class="vendedora-grid">
+                        <div class="vendedora-item">
+                            <p>Funcio. Amanda</p>
+                            <a href="https://api.whatsapp.com/send?phone=559888875351" class="btn btn-small" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        </div>
+                        <div class="vendedora-item">
+                            <p>Funcio. Bruna</p>
+                            <a href="https://api.whatsapp.com/send?phone=559888875352" class="btn btn-small" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        </div>
+                        <div class="vendedora-item">
+                            <p>Funcio. Carla</p>
+                            <a href="https://api.whatsapp.com/send?phone=559888875353" class="btn btn-small" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        </div>
+                        <div class="vendedora-item">
+                            <p>Funcio. Daniela</p>
+                            <a href="https://api.whatsapp.com/send?phone=559888875354" class="btn btn-small" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        </div>
+                        <div class="vendedora-item">
+                            <p>Funcio. Elisa</p>
+                            <a href="https://api.whatsapp.com/send?phone=559888875355" class="btn btn-small" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        </div>
+                    </div>
+                    <button id="closeContactMenuBtn" class="close-menu-btn">Fechar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <div class="container">
+                <h2>Fale Conosco</h2>
+                <p>Para dúvidas gerais ou outras informações, entre em contato:</p>
+                <a href="https://api.whatsapp.com/send?phone=559888875357" class="btn" target="_blank" rel="noopener noreferrer">Enviar Mensagem Geral</a>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://api.whatsapp.com/send?phone=559888875357" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+    </a>
+
+    <script src="script.js"></script>
+  <!-- Mapa -->
+  <div id="mapa">
+    <h2>Nos encontre aqui:</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.123212449191!2d-44.206156184218!3d-2.516439845207025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f691d48f17d575%3A0x622a84f7b02e24bd!2sD'fitas%20e%20Aviamentos!5e0!3m2!1spt-BR!2sbr!4v1684148193836!5m2!1spt-BR!2sbr"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+</div>
+</body>
+</html>

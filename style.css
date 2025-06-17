@@ -1,0 +1,452 @@
+:root {
+    --primary-color: #ff69b4;
+    --background-color: #fff0f5;
+    --text-color: #333;
+    --white: #fff;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ 
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    position: relative;
+    min-height: 100vh;
+}
+ 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 0;
+}
+ 
+/* Cabeçalho */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    color: var(--white);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+}
+ 
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+ 
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+    font-family: 'Quicksand', sans-serif; 
+}
+ 
+.nav-links a:hover {
+    color: #ffe3f3;
+}
+ 
+/* Seções */
+section {
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+ 
+/* Títulos com a fonte mais "afeminada" */
+h2, h3 {
+    font-family: 'Great Vibes', cursive;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+/* Aplicando estilos de fonte para h3 em todos os cards e itens de menu */
+.product-card h3, 
+.catalog-card h3,
+.catalog-item-detail p { /* Adicionado para os títulos de cada catálogo no mini-menu */
+    font-size: 1.8rem; /* Pode ajustar conforme preferir */
+    margin-bottom: 1rem;
+}
+ 
+p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+ 
+/* Botão */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    border: none;
+}
+ 
+.btn:hover {
+    background-color: #ff85c4;
+    transform: scale(1.05);
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
+}
+ 
+/* Carrossel de Produtos (mantido caso você volte a usá-lo) */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2rem;
+}
+ 
+.carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+ 
+.carousel-track .product-item {
+    flex: 0 0 auto;
+    width: 250px;
+    margin: 0 1rem;
+}
+ 
+.product-item img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+ 
+/* Catálogo - Versão Modernizada (para a seção de Contatos) */
+.catalog-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.catalog-card {
+    background: linear-gradient(145deg, #ffe3f3, #ffffff);
+    border: none;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.catalog-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.2), transparent 70%);
+    transform: rotate(25deg);
+    animation: shine 5s infinite linear;
+}
+
+.catalog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.catalog-card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.catalog-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.catalog-card .btn {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+@keyframes shine {
+    from {
+        transform: rotate(25deg) translateX(-100%);
+    }
+    to {
+        transform: rotate(25deg) translateX(100%);
+    }
+}
+
+/* ESTILOS PARA OS MINI-MENUS (VENDEDORAS E CATÁLOGOS) */
+/* Compartilha estilos base para ambos os mini-menus */
+.contact-mini-menu, .catalog-list-mini-menu { /* .catalog-list-mini-menu adicionado */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+    display: none; /* Inicia oculto */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Mostra o mini-menu quando a classe 'active' é adicionada */
+.contact-mini-menu.active, .catalog-list-mini-menu.active { /* .catalog-list-mini-menu.active adicionado */
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Títulos dentro dos mini-menus */
+.contact-mini-menu h4, .catalog-list-mini-menu h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Grid de itens dentro dos mini-menus */
+.vendedora-grid, .catalogs-grid { /* .catalogs-grid adicionado */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 150px é um bom tamanho mínimo */
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: center; /* Centraliza os itens na grid */
+    align-items: stretch; /* Garante que os cards tenham a mesma altura */
+}
+
+/* Estilo para cada item dentro das grids dos mini-menus */
+.vendedora-item, .catalog-item-detail { /* .catalog-item-detail adicionado */
+    background-color: #fff0f5;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    display: flex; /* Para alinhar o texto e o botão */
+    flex-direction: column; /* Para empilhar texto e botão */
+    justify-content: space-between; /* Empurra o botão para baixo se o texto for curto */
+}
+
+/* Efeito hover para os itens */
+.vendedora-item:hover, .catalog-item-detail:hover { /* .catalog-item-detail:hover adicionado */
+    transform: translateY(-5px);
+}
+
+/* Parágrafo de texto dentro dos itens do mini-menu */
+.vendedora-item p, .catalog-item-detail p { /* .catalog-item-detail p adicionado */
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.75rem; /* Espaçamento entre o nome/título e o botão */
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.3;
+    flex-grow: 1; /* Permite que o parágrafo ocupe o espaço disponível */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto se houver espaço */
+    justify-content: center; /* Centraliza horizontalmente o texto */
+}
+
+/* Botão de fechar para ambos os mini-menus */
+.close-menu-btn {
+    background-color: #ccc;
+    color: #333;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    margin-top: 1rem; /* Espaço acima do botão fechar */
+}
+
+.close-menu-btn:hover {
+    background-color: #aaa;
+}
+
+/* Ícone WhatsApp Flutuante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+    z-index: 1000;
+}
+ 
+.whatsapp-float img {
+    width: 35px;
+}
+ 
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+ 
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+ 
+/* Animações de Fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+ 
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+/* Canvas no fundo */
+#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--background-color);
+}
+ 
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        display: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 0 0 8px 8px;
+    }
+ 
+    .nav-links.active {
+        display: flex;
+    }
+ 
+    .carousel-track {
+        animation: scroll 30s linear infinite;
+    }
+
+    /* Ambos os grids de mini-menus em coluna única em telas menores */
+    .vendedora-grid, .catalogs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajuste para o padding das seções em mobile */
+    section {
+        padding: 2rem 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Modal do catálogo (mantido, embora não esteja explicitamente usado no HTML recente) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    animation: fadeInModal 0.5s ease-in-out;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #d94f00;
+}
+
+/* Grade de catálogo (mantido, embora não esteja explicitamente usado no HTML recente) */
+.catalog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 2rem 0;
+}
+
+.catalog-item {
+    text-align: center;
+    width: 150px;
+}
+
+.catalog-item img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+}
